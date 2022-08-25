@@ -1,5 +1,9 @@
 import { Component, VERSION } from '@angular/core';
-
+import {
+  NgbAlertModule,
+  NgbModule,
+  NgbPaginationModule,
+} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
