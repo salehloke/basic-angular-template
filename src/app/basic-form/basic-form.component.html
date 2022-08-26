@@ -1,7 +1,7 @@
-<div class="container">
-  <h1 class="page-title">Basic Form</h1>
+<div class="container p-5">
+  <h1 class="p-2">Basic Form</h1>
   <div>
-    <form>
+    <form formGroupName="basicForm">
       <!-- NAME -->
       <div class="row mb-2">
         <label for="name" class="col-4 col-form-label">Name </label>
@@ -18,4 +18,8 @@
       <!--end of NAME -->
     </form>
   </div>
+</div>
+
+<div>
+  <pre>Form Value: {{ basicForm.value }} </pre>
 </div>

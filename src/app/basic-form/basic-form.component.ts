@@ -8,15 +8,15 @@ import { FormBuilder, UntypedFormGroup } from '@angular/forms';
 })
 export class BasicFormComponent implements OnInit {
   basicForm: UntypedFormGroup;
-
-  // WHEN injecting formBuilder, makesure to import form & ReactiveForm
-  /**
-   * Error: Uncaught (in promise): NullInjectorError: R3InjectorError(AppModule)[FormBuilder -> FormBuilder -> FormBuilder]:
-   * - this error is because not importing the ReactiveFormsModule & FormsModule
-   */
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    /**
+     * - in order to use FormBuilder, need to import the ReactiveFormsModule & FormsModule
+     */
+    private fb: FormBuilder
+  ) {}
 
   ngOnInit() {
+    // create and init the form
     this.initForm();
   }
 
