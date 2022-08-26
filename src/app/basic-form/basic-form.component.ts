@@ -26,6 +26,8 @@ export class BasicFormComponent implements OnInit {
     this.basicForm = this.fb.group({
       name: [''],
       age: 0,
+      weight: 0,
+      height: 0,
     });
   }
 
