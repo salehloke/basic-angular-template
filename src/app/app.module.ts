@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
@@ -17,7 +16,7 @@ import { ToastrModule } from 'ngx-toastr';
     AppRoutingModule,
     ToastrModule.forRoot(),
   ],
-  declarations: [AppComponent, HelloComponent],
+  declarations: [AppComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
