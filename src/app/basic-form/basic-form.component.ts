@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, UntypedFormGroup } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-basic-form',
@@ -12,7 +13,8 @@ export class BasicFormComponent implements OnInit {
     /**
      * - in order to use FormBuilder, need to import the ReactiveFormsModule & FormsModule
      */
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit() {
@@ -25,5 +27,9 @@ export class BasicFormComponent implements OnInit {
       name: [''],
       age: 0,
     });
+  }
+
+  submit() {
+    this.toastr.success('Successfully submitted data', 'Success');
   }
 }
