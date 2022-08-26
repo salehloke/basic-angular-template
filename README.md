@@ -7,3 +7,5 @@
 * update form values
 * retrieve form values
 * link HTML template to typescripts
+* bootstrapped themed
+* 
