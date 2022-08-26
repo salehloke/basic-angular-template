@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
+import { BasicFormComponent } from './basic-form/basic-form.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import { ToastrModule } from 'ngx-toastr';
     AppRoutingModule,
     ToastrModule.forRoot(),
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, BasicFormComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

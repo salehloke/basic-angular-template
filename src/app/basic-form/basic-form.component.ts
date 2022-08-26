@@ -31,6 +31,13 @@ export class BasicFormComponent implements OnInit {
     });
   }
 
+  displayValue() {
+    const weightVal = this.basicForm.controls.weight.value;
+    const heightVal = this.basicForm.controls.height.value;
+    console.log('weight', weightVal);
+    console.log('height', heightVal);
+  }
+
   submit() {
     this.toastr.success('Successfully submitted data', 'Success');
   }

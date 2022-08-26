@@ -1,7 +1,7 @@
 <div class="container p-5">
   <h1 class="p-2">Basic Form</h1>
   <div>
-    <form formGroupName="basicForm">
+    <div [formGroup]="basicForm">
       <!-- NAME -->
       <div class="row mb-2">
         <label for="name" class="col-4 col-form-label">Name </label>
@@ -35,6 +35,7 @@
         <label for="weight" class="col-4 col-form-label">Weight </label>
         <div class="col-8">
           <input
+            (change)="displayValue()"
             type="text"
             class="form-control"
             id="weight"
@@ -46,9 +47,10 @@
       <!--end of WEIGHT -->
       <!-- HEIGHT -->
       <div class="row mb-2">
-        <label for="height" class="col-4 col-form-label">height </label>
+        <label for="height" class="col-4 col-form-label">Height </label>
         <div class="col-8">
           <input
+            (change)="displayValue()"
             type="text"
             class="form-control"
             id="height"
@@ -58,7 +60,7 @@
         </div>
       </div>
       <!--end of HEIGHT -->
-    </form>
+    </div>
 
     <button class="btn btn-primary">Submit</button>
   </div>
