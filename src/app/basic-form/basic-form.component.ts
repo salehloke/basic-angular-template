@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, UntypedFormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-basic-form',
@@ -7,7 +7,7 @@ import { FormBuilder, UntypedFormGroup } from '@angular/forms';
   styleUrls: ['./basic-form.component.css'],
 })
 export class BasicFormComponent implements OnInit {
-  basicForm: UntypedFormGroup;
+  mainFormGroup: UntypedFormGroup;
   constructor(
     /**
      * - in order to use FormBuilder, need to import the ReactiveFormsModule & FormsModule
@@ -21,9 +21,14 @@ export class BasicFormComponent implements OnInit {
   }
 
   initForm() {
-    this.basicForm = this.fb.group({
+    this.mainFormGroup = this.fb.group({
       name: [''],
       age: 0,
     });
   }
+}
+
+export interface BasicFormModel {
+  name: FormControl<string | null>;
+  age: FormControl<number | null>;
 }
