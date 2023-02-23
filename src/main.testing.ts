@@ -25,7 +25,6 @@ import {
 
 // Spec files to include in the Stackblitz tests
 // import './app/app.component.spec.ts';
-import './app/playground-template-driven-forms-component/playground-template-driven-forms-component.component.spec.ts';
 
 // get fresh instance of jasmine and
 bootstrap();
